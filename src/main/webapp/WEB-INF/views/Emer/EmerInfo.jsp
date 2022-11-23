@@ -2,9 +2,21 @@
 <!DOCtype html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <title>실시간 응급실가용병상</title>
     <script src="/js/jquery-3.6.1.min.js"></script>
+    <style type="text/css">
+        div.question-box {
+            margin: 10px 0 20px 0;
+        }
+        .red{
+            color:red;
+        }
+        .blue{
+            color: blue;
+        }
+    </style>
     <script>
         window.onload=em;
         function em(){
@@ -23,9 +35,12 @@
                         let dt = response[i]["dutyTel3"]; //item.dutyTel3; //병원 전화번호
                         let hv = response[i]["hvec"]; //item.hvec;//가용병상 개수
 
+
                         $("#emer_info").append("<div><b>병원이름 : "+dn+"</b></div>");
                         $("#emer_info").append("<div><b>전화번호 : "+dt+"</b></div>")
                         $("#emer_info").append("<div><b>가용병상 : "+hv+"</b></div>")
+                        $("#emer_info").append("<br>")
+
 
                     }
 
@@ -35,10 +50,17 @@
     </script>
 </head>
 <body>
-<div>
+<div style="text-align: center">
+    <br><br><br>
     <label>응급실가용병상</label>
     <br>
+    <br>
+    <br>
+    <br>
     <span id="emer_info"></span>
+
+
+
 
 
 </div>
