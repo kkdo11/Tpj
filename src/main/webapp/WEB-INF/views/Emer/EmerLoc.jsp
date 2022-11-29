@@ -23,21 +23,34 @@
                     for (let i = 0; i<response.length; i++) {
                         let dn = response[i]["dutyName"]; //item.dutyName; //뱡워이름
                         let lat = response[i]["latitude"]; //위도
-                        let long = response[i]["longitude"]; //경도
+                        let lon = response[i]["longitude"]; //경도
+
+
+
+                        // console.log(positions)
 
 
                         $("#loc").append("<div><b>병원이름 : "+dn+"</b></div>");
                         $("#loc").append("<div><b>위도 : "+lat+"</b></div>")
-                        $("#loc").append("<div><b>경도 : "+long+"</b></div>")
+                        $("#loc").append("<div><b>경도 : "+lon+"</b></div>")
                         $("#loc").append("<br>")
 
-
-
                     }
+        //             for (let i = 0; i<response.length; i++) {
+        //             positions.push(
+        //                 {
+        //                     lat:response.lat,
+        //                     lon:response.lon
+        //                 }
+        //             )}
+        //
+        //
+        //
+        //
+        //         }
+        //     })
+        // }
 
-                }
-            })
-        }
     </script>
 </head>
 <body>
