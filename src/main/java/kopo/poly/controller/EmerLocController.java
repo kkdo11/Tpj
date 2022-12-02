@@ -1,7 +1,6 @@
 package kopo.poly.controller;
 
 import kopo.poly.dto.EmerLocRowDTO;
-import kopo.poly.dto.EmerRowDTO;
 import kopo.poly.service.IEmerLocService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
@@ -20,15 +19,17 @@ import java.util.List;
 public class EmerLocController {
 
     @Resource(name = "EmerLocService")
-    private IEmerLocService emerService;
+    private IEmerLocService emerLocService;
 
     @ResponseBody
     @GetMapping(value = "/getEmerLoc")
-    public List<EmerLocRowDTO> getEmer() throws Exception {
+    public List<EmerLocRowDTO> getLoc() throws Exception {
         log.info(this.getClass().getName() + "getEmerLoc START");
 
-        List<EmerLocRowDTO> eList = emerService.getLoc();
+        List<EmerLocRowDTO> eList = emerLocService.getLoc();
         log.info("첫번째 확인 : " + eList.get(0).getDutyName());
+//        log.info(" 확인 : " + eList.get(0).getLatitude());
+//        log.info(" 확인 : " + eList.get(0).getLongitude());
         log.info(this.getClass().getName() + "getEmerLoc END");
 
         return eList;
@@ -36,12 +37,11 @@ public class EmerLocController {
     }
 
     @GetMapping(value = "EmerLoc")
-    public String EmerInfo() {
-        log.info(this.getClass().getName() + "EmerInfo success");
+    public String EmerLoc() {
+        log.info(this.getClass().getName() + "EmerLoc success");
         return "Emer/EmerLoc";
     }
 }
-
 
 
 
