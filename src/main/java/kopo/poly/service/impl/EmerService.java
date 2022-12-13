@@ -48,11 +48,11 @@ public class EmerService implements IEmerService {
             eDTO.setDutyTel3(tagValue.getTagValue("dutyTel3", eElement));
             eDTO.setHvec(tagValue.getTagValue("hvec", eElement));
 
-            log.info(i + "번째 ================");
-            log.info("dutyName : " + eDTO.getDutyName());
-            log.info("dutyTel3 : " + eDTO.getDutyTel3());
-            log.info("dutyHvec : " + eDTO.getHvec());
-            log.info("======================");
+//            log.info(i + "번째 ================");
+//            log.info("dutyName : " + eDTO.getDutyName());
+//            log.info("dutyTel3 : " + eDTO.getDutyTel3());
+//            log.info("dutyHvec : " + eDTO.getHvec());
+//            log.info("======================");
 
             eList.add(eDTO);
         }
@@ -60,3 +60,4 @@ public class EmerService implements IEmerService {
         return eList;
     }
 }
+//s

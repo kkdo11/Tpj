@@ -8,4 +8,4 @@ import java.util.List;
 
 public interface IEmerLocService {
     List<EmerLocRowDTO> getLoc() throws Exception;
-}
+}//s

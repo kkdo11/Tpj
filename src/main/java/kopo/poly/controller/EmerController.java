@@ -40,7 +40,7 @@ public class EmerController {
         return "Emer/EmerInfo";
     }
 }
-
+//s
 
 
 

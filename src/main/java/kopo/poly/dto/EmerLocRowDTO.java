@@ -11,3 +11,4 @@ public class EmerLocRowDTO {
     private String latitude;//위도
     private String longitude;//경도
 }
+//s

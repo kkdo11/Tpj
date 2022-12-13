@@ -28,8 +28,8 @@ public class EmerLocController {
 
         List<EmerLocRowDTO> eList = emerLocService.getLoc();
         log.info("첫번째 확인 : " + eList.get(0).getDutyName());
-//        log.info(" 확인 : " + eList.get(0).getLatitude());
-//        log.info(" 확인 : " + eList.get(0).getLongitude());
+        log.info(" 확인 : " + eList.get(0).getLatitude());
+        log.info(" 확인 : " + eList.get(0).getLongitude());
         log.info(this.getClass().getName() + "getEmerLoc END");
 
         return eList;
@@ -42,6 +42,5 @@ public class EmerLocController {
         return "Emer/EmerLoc";
     }
 }
-
-
+//s
 
